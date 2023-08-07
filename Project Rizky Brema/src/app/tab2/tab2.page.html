@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registrasi</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card class="welcome-card bg-content">
+      <ion-card-header>
+        <ion-card-title color="primary">Rizky Brema</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Silahkan isi form dibawah ini untuk pendataan!</p>
+
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input type="text" [(ngModel)]="nama"></ion-input>
+          </ion-item>
+        
+            <ion-item>
+              <ion-label position="floating">Nomor Hp/WA</ion-label>
+              <ion-input type="text"[(ngModel)]="nohp"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email"[(ngModel)]="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Program Studi</ion-label>
+            <ion-select [(ngModel)]="prodi" class="popover-content" placeholder="Pilih Program Studi">
+              <ion-select-option value="Teknik Informatika (S1)">Teknik Informatika (S1)</ion-select-option>
+              <ion-select-option value="Sistem Informasi (S1)">Sistem Informasi (S1)</ion-select-option>
+              <ion-select-option value="Rekayasa Perangkat Lunak (S1)">Rekayasa Perangkat Lunak (S1)</ion-select-option>
+              <ion-select-option value="Teknologi Informasi (S1)">Teknologi Informasi (S1)</ion-select-option>
+              <ion-select-option value="Teknik Elektro (S1)">Teknik Elektro (S1)</ion-select-option>
+              <ion-select-option value="Teknologi Industri (S1)">Teknologi Industri (S1)</ion-select-option>
+              <ion-select-option value="Manajemen Informatika (D3)">Manajemen Informatika (D3)</ion-select-option>
+              <ion-select-option value="Teknik Informatika (D3)">Teknik Informatika (D3)</ion-select-option>
+              <ion-select-option value="Akuntansi (D3)">Akuntansi (D3)</ion-select-option>
+              <ion-select-option value="Bahasa Inggris (D3)">Bahasa Inggris (D3)</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Tahun Lulus</ion-label>
+            <ion-select [(ngModel)]="tahunlulus" class="popover-content" placeholder="Pilih Tahun Lulus">
+              <ion-select-option value="2021">2021</ion-select-option>
+              <ion-select-option value="2020">2020</ion-select-option>
+              <ion-select-option value="2019">2019</ion-select-option>
+              <ion-select-option value="2018">2018</ion-select-option>
+              <ion-select-option value="2017">2017</ion-select-option>
+              <ion-select-option value="2016">2016</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+        </ion-list>
+
+        <div padding>
+          <ion-button expand="block" color="primary" size="medium" (click)="addRegister()"><ion-icon name="trending-up-outline">
+          </ion-icon>
+        Daftar
+        </ion-button>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+</ion-content>
